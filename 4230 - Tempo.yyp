@@ -45,6 +45,7 @@
     {"id":{"name":"rmTutorialLevel","path":"rooms/rmTutorialLevel/rmTutorialLevel.yy",},},
     {"id":{"name":"sBoss","path":"sprites/sBoss/sBoss.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+    {"id":{"name":"sStartScreenBackground","path":"sprites/sStartScreenBackground/sStartScreenBackground.yy",},},
     {"id":{"name":"sTeleporter","path":"sprites/sTeleporter/sTeleporter.yy",},},
   ],
   "resourceType":"GMProject",
