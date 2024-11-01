@@ -34,6 +34,7 @@
   },
   "name":"4230 - Tempo",
   "resources":[
+    {"id":{"name":"oBoss","path":"objects/oBoss/oBoss.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oTeleporter","path":"objects/oTeleporter/oTeleporter.yy",},},
     {"id":{"name":"rmBoss","path":"rooms/rmBoss/rmBoss.yy",},},
