@@ -1,6 +1,6 @@
 {
   "$GMProject":"",
-  "%Name":"Tempo",
+  "%Name":"4230 - Tempo",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -32,15 +32,29 @@
   "MetaData":{
     "IDEVersion":"2024.8.1.171",
   },
-  "name":"Tempo",
+  "name":"4230 - Tempo",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
-    {"id":{"name":"spr_test","path":"sprites/spr_test/spr_test.yy",},},
+    {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+    {"id":{"name":"oTeleporter","path":"objects/oTeleporter/oTeleporter.yy",},},
+    {"id":{"name":"rmBoss","path":"rooms/rmBoss/rmBoss.yy",},},
+    {"id":{"name":"rmEndScreen","path":"rooms/rmEndScreen/rmEndScreen.yy",},},
+    {"id":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
+    {"id":{"name":"rmStartScreen","path":"rooms/rmStartScreen/rmStartScreen.yy",},},
+    {"id":{"name":"rmStory","path":"rooms/rmStory/rmStory.yy",},},
+    {"id":{"name":"rmTutorialLevel","path":"rooms/rmTutorialLevel/rmTutorialLevel.yy",},},
+    {"id":{"name":"sBoss","path":"sprites/sBoss/sBoss.yy",},},
+    {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+    {"id":{"name":"sTeleporter","path":"sprites/sTeleporter/sTeleporter.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rmStory","path":"rooms/rmStory/rmStory.yy",},},
+    {"roomId":{"name":"rmStartScreen","path":"rooms/rmStartScreen/rmStartScreen.yy",},},
+    {"roomId":{"name":"rmTutorialLevel","path":"rooms/rmTutorialLevel/rmTutorialLevel.yy",},},
+    {"roomId":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
+    {"roomId":{"name":"rmBoss","path":"rooms/rmBoss/rmBoss.yy",},},
+    {"roomId":{"name":"rmEndScreen","path":"rooms/rmEndScreen/rmEndScreen.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
