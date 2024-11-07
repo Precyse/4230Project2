@@ -12,6 +12,11 @@ function get_controls(){
 	leftKey = keyboard_check(vk_left)  + keyboard_check(ord("A"));
 	leftKey = clamp(leftKey, 0, 1);
 	
+	upKey = keyboard_check(vk_up) + keyboard_check(ord("W"));
+	upKey = clamp(upKey, 0, 1);
+	
+	downKey = keyboard_check(vk_down) + keyboard_check(ord("S"));
+	downKey = clamp(downKey, 0, 1);
 	
 	jumpKeyPressed = keyboard_check_pressed(vk_space);
 	jumpKeyPressed = clamp(jumpKeyPressed, 0, 1);

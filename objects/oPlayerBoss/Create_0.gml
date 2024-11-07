@@ -5,6 +5,9 @@ controlSetup();
 
 canFire = true;
 
+facingRight = true;
+facingLeft = false;
+
 health = 100;
 global.stamina = 80;
 
