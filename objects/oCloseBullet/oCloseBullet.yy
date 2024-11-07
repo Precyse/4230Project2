@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oBullet",
+  "%Name":"oCloseBullet",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oBoss","path":"objects/oBoss/oBoss.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oBullet",
+  "name":"oCloseBullet",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sBullet",
-    "path":"sprites/sBullet/sBullet.yy",
+    "name":"sCloseBullet",
+    "path":"sprites/sCloseBullet/sCloseBullet.yy",
   },
   "spriteMaskId":null,
   "visible":true,
