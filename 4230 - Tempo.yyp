@@ -35,6 +35,7 @@
   "name":"4230 - Tempo",
   "resources":[
     {"id":{"name":"oBoss","path":"objects/oBoss/oBoss.yy",},},
+    {"id":{"name":"oBossBullet","path":"objects/oBossBullet/oBossBullet.yy",},},
     {"id":{"name":"oCloseBullet","path":"objects/oCloseBullet/oCloseBullet.yy",},},
     {"id":{"name":"oFarBullet","path":"objects/oFarBullet/oFarBullet.yy",},},
     {"id":{"name":"oFloor","path":"objects/oFloor/oFloor.yy",},},
