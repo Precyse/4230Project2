@@ -4,6 +4,7 @@ get_controls();
 x = clamp(x, 0, room_width);
 y = clamp(y, 0, room_height);
 
+
 // X Movement
 	//Direction
 	moveDir = rightKey - leftKey;
@@ -12,6 +13,16 @@ y = clamp(y, 0, room_height);
 	
 	//Get xspd
 	xspd = moveDir * moveSpd;
+	
+	
+	//Dashing
+	dashDuration = max(dashDuration - 1,0)
+	if(dashKey){
+		dashDuration = 10;
+		if (face != 0) { // Dashes in the direction the player is facing
+			xspd = face * dashSpd;
+    }
+}
 	// X Collision
 	var _subPixel = .5;
 	if place_meeting(x + xspd, y, oFloor){
@@ -26,15 +37,22 @@ y = clamp(y, 0, room_height);
 // Y Movement
 	// Gravity
 	yspd += grav
-	
 	//Jump
-	if jumpKeyBuffered{	
+	if jumpKeyBuffered && jumpCount < jumpMax{
+		
+		jumpKeyBuffered = false;
+		jumpKeyBufferTimer = 0;
+		
+		jumpCount++;
+		
 		yspd = jspd;
+		
 	}
 	//if yspd > termVel{yspd = termVel}
 	
 	// Y Collision
 	if place_meeting(x, y + yspd, oFloor){
+		jumpCount = 0;
 		var _pixelCheck = _subPixel * sign(yspd);
 		while !place_meeting(x,y + _pixelCheck, oFloor){
 			y += _pixelCheck;
@@ -66,7 +84,7 @@ if(mouse_check_button(mb_left) and canFire = true){
 	alarm[0] = 20;
 	
 }
-// Spead Bullet Pattern (Alt Fire) => Yes IK there is a better way to implement this but idc
+// Spead Bullet Pattern (Alt Fire)
 if(mouse_check_button(mb_right) and canFire = true){
 		var closeBulletTop = instance_create_layer(x, y-25,"Instances",oCloseBullet);
 		var closeBulletMiddle = instance_create_layer(x, y,"Instances",oCloseBullet);
@@ -92,3 +110,6 @@ if(mouse_check_button(mb_right) and canFire = true){
 		canFire = false;
 		alarm[0] = 20;
     }
+
+
+

@@ -18,6 +18,12 @@ moveDir = 0;
 moveSpd = 3;
 canJump = true;
 
+dashSpd = 100
+dashDuration = 0;
+isDashing = false;
+
+
+
 //Attacking
 isAttacking = false;
 canAttack = true;
@@ -27,7 +33,7 @@ yspd = 0;
 grav = 0.5;
 jspd = -15;
 termVel = 5;
-jumpMax = 2;
+jumpMax = 1;
 jumpCount = 0;
 jumpHoldTimer = 0;
 jumpHoldFrames = 18;
