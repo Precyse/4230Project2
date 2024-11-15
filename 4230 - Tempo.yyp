@@ -37,6 +37,7 @@
     {"id":{"name":"oBoss","path":"objects/oBoss/oBoss.yy",},},
     {"id":{"name":"oBossBullet","path":"objects/oBossBullet/oBossBullet.yy",},},
     {"id":{"name":"oCloseBullet","path":"objects/oCloseBullet/oCloseBullet.yy",},},
+    {"id":{"name":"oController","path":"objects/oController/oController.yy",},},
     {"id":{"name":"oFarBullet","path":"objects/oFarBullet/oFarBullet.yy",},},
     {"id":{"name":"oFloor","path":"objects/oFloor/oFloor.yy",},},
     {"id":{"name":"oPlayerBoss","path":"objects/oPlayerBoss/oPlayerBoss.yy",},},
