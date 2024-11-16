@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oJumpTutorialText",
+  "%Name":"oTutorialBoss",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oFarBullet","path":"objects/oFarBullet/oFarBullet.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oCloseBullet","path":"objects/oCloseBullet/oCloseBullet.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oJumpTutorialText",
+  "name":"oTutorialBoss",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -29,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sBoss",
+    "path":"sprites/sBoss/sBoss.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

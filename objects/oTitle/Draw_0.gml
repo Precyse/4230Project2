@@ -9,5 +9,6 @@ draw_set_valign(fa_middle);
 
 draw_text(x,y,"Tempo");
 
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
+if keyboard_check_pressed(vk_anykey){
+	room_goto_next();
+}
