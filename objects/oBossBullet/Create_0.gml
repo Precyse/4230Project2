@@ -4,5 +4,5 @@
 // Inherit the parent event
 event_inherited();
 initial = y
-maxY = 100
+maxY = 200
 

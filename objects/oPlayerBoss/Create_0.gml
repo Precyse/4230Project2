@@ -15,7 +15,7 @@ global.stamina = 80;
 face = 1;
 xspd = 0;
 moveDir = 0;
-moveSpd = 3;
+moveSpd = 5;
 canJump = true;
 
 dashSpd = 100

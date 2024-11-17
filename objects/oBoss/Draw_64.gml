@@ -1,5 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-oBoss.hp -= 5
-if oBoss.hp <= 0 instance_destroy(oBoss)
-instance_destroy(self);
+draw_healthbar(350, 50, 900, 75, oBoss.hp, c_white, c_black, c_red, 0, true, true);
