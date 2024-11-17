@@ -1,5 +1,8 @@
 /// @description Insert description here
-// You can write your code in this editor
+
+
+//On contact with boss, reduce boss hp and destroy it if its hp reaches 0
+//Destroys itself afterwards
 oBoss.hp -= 1
 if oBoss.hp <= 0 instance_destroy(oBoss)
 instance_destroy(self);

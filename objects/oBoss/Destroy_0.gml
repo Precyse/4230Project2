@@ -1,3 +1,4 @@
 /// @description Insert description here
-// You can write your code in this editor
+
+//Restart game when boss is killed (Go to next room once that's implemented)
 game_restart()
