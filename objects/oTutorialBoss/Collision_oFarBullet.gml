@@ -1,4 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Flash when hit
+sprite_index = sTutorialBossHit;
+instance_destroy(other)
+instance_create_depth(oTutorialBoss.x,oTutorialBoss.y,0,oHitFX)
