@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"sTutorialBoss",
-    "path":"sprites/sTutorialBoss/sTutorialBoss.yy",
+    "name":"sBoss",
+    "path":"sprites/sBoss/sBoss.yy",
   },
   "spriteMaskId":null,
   "visible":true,

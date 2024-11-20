@@ -110,7 +110,8 @@ if(mouse_check_button(mb_right) and canFire = true){
 		canFire = false;
 		alarm[0] = 20;
     }
-	
+
+//Life Control
 
 
 

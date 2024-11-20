@@ -1,8 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
-image_index = 0;
-image_speed = false;
+moveDir = 0;
+moveSpd = 2;
+xspd = 0;
+yspd = 0;
 
-xDirection = 0;
-yDirection = 0;
-moveSpd = 10;
+//sprite control
+face = 0;
+sprite[0] = sPlayerRight;
+sprite[1] = sPlayerUp;
+sprite[2] = sPlayerLeft;
+sprite[3] = sPlayerDown;
