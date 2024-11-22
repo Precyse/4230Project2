@@ -8,12 +8,16 @@
   "instanceCreationOrder":[
     {"name":"inst_7C2A43A","path":"rooms/rmMain/rmMain.yy",},
     {"name":"inst_431FFF01","path":"rooms/rmMain/rmMain.yy",},
+    {"name":"inst_53297CA1","path":"rooms/rmMain/rmMain.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_7C2A43A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7C2A43A","objectId":{"name":"oTeleporter","path":"objects/oTeleporter/oTeleporter.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":640.0,"y":192.0,},
         {"$GMRInstance":"v1","%Name":"inst_431FFF01","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_431FFF01","objectId":{"name":"oPlayerMain","path":"objects/oPlayerMain/oPlayerMain.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":640.0,"y":384.0,},
+        {"$GMRInstance":"v1","%Name":"inst_53297CA1","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_53297CA1","objectId":{"name":"oTeleporter","path":"objects/oTeleporter/oTeleporter.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oTeleporter","path":"objects/oTeleporter/oTeleporter.yy",},"propertyId":{"name":"boss","path":"objects/oTeleporter/oTeleporter.yy",},"resource":{"name":"rmBoss2","path":"rooms/rmBoss2/rmBoss2.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rmBoss2",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":864.0,"y":384.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
         {"$GMRSpriteGraphic":"","%Name":"graphic_372CD3FE","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_372CD3FE","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"sNeonSignOne","path":"sprites/sNeonSignOne/sNeonSignOne.yy",},"x":896.0,"y":224.0,},

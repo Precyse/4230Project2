@@ -25,7 +25,9 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"boss","filters":[],"listItems":[],"multiselect":false,"name":"boss","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rmBoss","path":"rooms/rmBoss/rmBoss.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rmBoss","varType":5,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
