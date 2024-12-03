@@ -117,22 +117,27 @@ if(mouse_check_button(mb_right) and canFire = true){
     }
 
 //Sprite Control
-if xspd == 0 and yspd == 0{
-	sprite_index = sPlayer;
-	image_index = 0;
-}
-if yspd != 0{
-	sprite_index = sPlayer;
-}
-if(!(mouse_check_button(mb_right) or mouse_check_button(mb_left))){
-	attacking = false;
-}
-if (attacking){
-	sprite_index = sPlayerAttack;
-	image_speed = 1;
+if (attacking) {
+    sprite_index = sPlayerAttack;
+    image_speed = 1;
+
+// check if attacking anim finished
+    if (image_index >= image_number - 1) {
+        attacking = false;
+        image_index = 0;
+    }
 } else {
-	sprite_index = sPlayer
-	image_speed = 1;
+    // not attacking
+    sprite_index = sPlayer;
+
+    if (xspd != 0) {
+       // running sprite
+        image_speed = 1; 
+    } else {
+        // freeze sprite if standing
+        image_speed = 0; 
+        image_index = 0; 
+    }
 }
 // Life Control
 if lives == 0 {
