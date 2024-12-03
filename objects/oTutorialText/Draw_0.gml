@@ -8,3 +8,4 @@ draw_text(x,y+100,"Right Click for Close Range Attack");
 draw_text(x,y+150,"F to Dash");
 
 draw_text(oMainRoomTele.x-70,oMainRoomTele.y-60,"Press E");
+
