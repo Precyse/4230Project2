@@ -10,18 +10,22 @@ y = clamp(y, 0, room_height);
 
 	if moveDir != 0 {face = moveDir; };
 	
-	//Get xspd
-	xspd = moveDir * moveSpd;
-	
-	
-	//Dashing
-	dashDuration = max(dashDuration - 1,0)
-	if(dashKey){
-		dashDuration = 10;
-		if (face != 0) { // Dashes in the direction the player is facing
-			xspd = face * dashSpd;
-    }
+// Normal Movement
+if (dashDuration == 0) { // Only apply normal movement when not dashing
+    xspd = moveDir * moveSpd;
 }
+
+// Dashing
+if (dashKey && dashDuration == 0) { // Start a new dash only if not already dashing
+    dashDuration = 10;
+    dashDir = face; // Save the direction for the dash
+}
+
+if (dashDuration > 0) {
+    dashDuration -= 1; // Decrease the dash timer
+    xspd = dashDir * dashSpd; // Apply dash speed in the saved direction
+}
+
 	// X Collision
 	var _subPixel = .5;
 	if place_meeting(x + xspd, y, oFloor){

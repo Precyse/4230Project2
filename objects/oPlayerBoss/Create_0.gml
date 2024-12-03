@@ -18,7 +18,7 @@ moveDir = 0;
 moveSpd = 5;
 canJump = true;
 
-dashSpd = 100
+dashSpd = 20;
 dashDuration = 0;
 isDashing = false;
 
@@ -53,3 +53,4 @@ onGround = true;
 spread_count = 3; // Number of bullets in the spread
 spread_angle = 45; // Total angle of the spread
 lives = 3;
+dashDir = face;

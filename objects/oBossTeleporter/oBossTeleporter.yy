@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oTeleporter",
+  "%Name":"oBossTeleporter",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oPlayerMain","path":"objects/oPlayerMain/oPlayerMain.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oTeleporter",
+  "name":"oBossTeleporter",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
