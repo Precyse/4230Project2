@@ -2,7 +2,7 @@
 // You can write your code in this editor
 controlSetup();
 //Sprites
-
+attacking = false;
 canFire = true;
 
 facingRight = true;

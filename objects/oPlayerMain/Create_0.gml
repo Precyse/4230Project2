@@ -8,6 +8,10 @@ yspd = 0;
 //sprite control
 face = 0;
 sprite[0] = sPlayerRight;
-sprite[1] = sPlayerUp;
-sprite[2] = sPlayerLeft;
-sprite[3] = sPlayerDown;
+sprite[1] = sPlayerUpRight;
+sprite[2] = sPlayerUp;
+sprite[3] = sPlayerUpLeft;
+sprite[4] = sPlayerLeft;
+sprite[5] = sPlayerDownLeft;
+sprite[6] = sPlayerDown;
+sprite[7] = sPlayerDownRight;

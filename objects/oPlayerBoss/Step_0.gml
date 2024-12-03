@@ -4,7 +4,6 @@ get_controls();
 x = clamp(x, 0, room_width);
 y = clamp(y, 0, room_height);
 
-
 // X Movement
 	//Direction
 	moveDir = rightKey - leftKey;
@@ -73,7 +72,8 @@ else if (xprevious > x) {
 	
 // Far Bullets (Main Fire)
 if(mouse_check_button(mb_left) and canFire = true){
-	var farBullet = instance_create_layer(x, y,"Instances",oFarBullet);
+	attacking = true;
+	var farBullet = instance_create_layer(x+30, y+20,"Instances",oFarBullet);
 	if(facingRight){
 		farBullet.speed = 15;
 	}
@@ -86,17 +86,18 @@ if(mouse_check_button(mb_left) and canFire = true){
 }
 // Spead Bullet Pattern (Alt Fire)
 if(mouse_check_button(mb_right) and canFire = true){
-		var closeBulletTop = instance_create_layer(x, y-25,"Instances",oCloseBullet);
-		var closeBulletMiddle = instance_create_layer(x, y,"Instances",oCloseBullet);
-		var closeBulletBottom = instance_create_layer(x, y+25,"Instances",oCloseBullet);
-		if(facingRight){
-			closeBulletTop.speed = 15;
-			closeBulletTop.direction = 10;
+	attacking = true;
+	var closeBulletTop = instance_create_layer(x+30, y-5,"Bullets",oCloseBullet);
+	var closeBulletMiddle = instance_create_layer(x+30, y+20,"Bullets",oCloseBullet);
+	var closeBulletBottom = instance_create_layer(x+30, y+45,"Bullets",oCloseBullet);
+	if(facingRight){
+		closeBulletTop.speed = 15;
+		closeBulletTop.direction = 10;
 			
-			closeBulletMiddle.speed = 15;
+		closeBulletMiddle.speed = 15;
 			
-			closeBulletBottom.speed = 15;
-			closeBulletBottom.direction = -10;
+		closeBulletBottom.speed = 15;
+		closeBulletBottom.direction = -10;
 		}
 		if(facingLeft){
 			closeBulletTop.speed = -15;
@@ -111,7 +112,28 @@ if(mouse_check_button(mb_right) and canFire = true){
 		alarm[0] = 20;
     }
 
-//Life Control
+//Sprite Control
+if xspd == 0 and yspd == 0{
+	sprite_index = sPlayer;
+	image_index = 0;
+}
+if yspd != 0{
+	sprite_index = sPlayer;
+}
+if(!(mouse_check_button(mb_right) or mouse_check_button(mb_left))){
+	attacking = false;
+}
+if (attacking){
+	sprite_index = sPlayerAttack;
+	image_speed = 1;
+} else {
+	sprite_index = sPlayer
+	image_speed = 1;
+}
+// Life Control
+if lives == 0 {
+	instance_destroy();
+}
 
 
 
