@@ -18,5 +18,5 @@ if (mouse_check_button_pressed(mb_right)) {
 // Check if all actions have occurred
 if (hasDashed && hasJumped && hasLeftClicked && hasRightClicked) {
     // Create the instance
-    instance_create_layer(100, 100, "Instances", oMainRoomTele);
+    instance_create_layer(1700, 450, "Instances", oMainRoomTele);
 }

@@ -4,25 +4,29 @@ get_controls();
 x = clamp(x, 0, room_width);
 y = clamp(y, 0, room_height);
 
-
 // X Movement
 	//Direction
 	moveDir = rightKey - leftKey;
 
 	if moveDir != 0 {face = moveDir; };
 	
-	//Get xspd
-	xspd = moveDir * moveSpd;
-	
-	
-	//Dashing
-	dashDuration = max(dashDuration - 1,0)
-	if(dashKey){
-		dashDuration = 10;
-		if (face != 0) { // Dashes in the direction the player is facing
-			xspd = face * dashSpd;
-    }
+// Normal Movement
+if (dashDuration == 0) { // Only apply normal movement when not dashing
+    xspd = moveDir * moveSpd;
 }
+
+// Dashing
+if (dashKey && dashDuration == 0) { // Start a new dash only if not already dashing
+    hasDashed = true;
+	dashDuration = 10;
+    dashDir = face; // Save the direction for the dash
+}
+
+if (dashDuration > 0) {
+    dashDuration -= 1; // Decrease the dash timer
+    xspd = dashDir * dashSpd; // Apply dash speed in the saved direction
+}
+
 	// X Collision
 	var _subPixel = .5;
 	if place_meeting(x + xspd, y, oFloor){
@@ -52,6 +56,7 @@ y = clamp(y, 0, room_height);
 	
 	// Y Collision
 	if place_meeting(x, y + yspd, oFloor){
+		hasDashed = false;
 		jumpCount = 0;
 		var _pixelCheck = _subPixel * sign(yspd);
 		while !place_meeting(x,y + _pixelCheck, oFloor){
@@ -73,7 +78,8 @@ else if (xprevious > x) {
 	
 // Far Bullets (Main Fire)
 if(mouse_check_button(mb_left) and canFire = true){
-	var farBullet = instance_create_layer(x, y,"Instances",oFarBullet);
+	attacking = true;
+	var farBullet = instance_create_layer(x+30, y+20,"Instances",oFarBullet);
 	if(facingRight){
 		farBullet.speed = 15;
 	}
@@ -86,17 +92,18 @@ if(mouse_check_button(mb_left) and canFire = true){
 }
 // Spead Bullet Pattern (Alt Fire)
 if(mouse_check_button(mb_right) and canFire = true){
-		var closeBulletTop = instance_create_layer(x, y-25,"Bullets",oCloseBullet);
-		var closeBulletMiddle = instance_create_layer(x, y,"Bullets",oCloseBullet);
-		var closeBulletBottom = instance_create_layer(x, y+25,"Bullets",oCloseBullet);
-		if(facingRight){
-			closeBulletTop.speed = 15;
-			closeBulletTop.direction = 10;
+	attacking = true;
+	var closeBulletTop = instance_create_layer(x+30, y-5,"Bullets",oCloseBullet);
+	var closeBulletMiddle = instance_create_layer(x+30, y+20,"Bullets",oCloseBullet);
+	var closeBulletBottom = instance_create_layer(x+30, y+45,"Bullets",oCloseBullet);
+	if(facingRight){
+		closeBulletTop.speed = 15;
+		closeBulletTop.direction = 10;
 			
-			closeBulletMiddle.speed = 15;
+		closeBulletMiddle.speed = 15;
 			
-			closeBulletBottom.speed = 15;
-			closeBulletBottom.direction = -10;
+		closeBulletBottom.speed = 15;
+		closeBulletBottom.direction = -10;
 		}
 		if(facingLeft){
 			closeBulletTop.speed = -15;
@@ -112,15 +119,30 @@ if(mouse_check_button(mb_right) and canFire = true){
     }
 
 //Sprite Control
-if xspd == 0 and yspd == 0{
-	image_index = 0;
-}
-if yspd != 0{
-	image_index = 0;
-}
+if (attacking) {
+    sprite_index = sPlayerAttack;
+    image_speed = 1;
 
+// check if attacking anim finished
+    if (image_index >= image_number - 1) {
+        attacking = false;
+        image_index = 0;
+    }
+} else {
+    // not attacking
+    sprite_index = sPlayer;
+
+    if (xspd != 0) {
+       // running sprite
+        image_speed = 1; 
+    } else {
+        // freeze sprite if standing
+        image_speed = 0; 
+        image_index = 0; 
+    }
+}
 // Life Control
-if lives == 0{
+if lives == 0 {
 	instance_destroy();
 }
 

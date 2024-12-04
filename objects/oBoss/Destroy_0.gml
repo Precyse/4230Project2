@@ -1,4 +1,2 @@
 /// @description Insert description here
-
-//Restart game when boss is killed (Go to next room once that's implemented)
-room_goto(rmMain)
+instance_create_layer(1250,600,"Instances",oTopMusicDisk);

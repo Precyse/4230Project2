@@ -16,8 +16,9 @@ if (dashDuration == 0) { // Only apply normal movement when not dashing
 }
 
 // Dashing
-if (dashKey && dashDuration == 0) { // Start a new dash only if not already dashing
-    dashDuration = 10;
+if (dashKey && dashDuration == 0 && hasDashed = false) { // Start a new dash only if not already dashing
+    hasDashed = true;
+	dashDuration = 10;
     dashDir = face; // Save the direction for the dash
 }
 
@@ -56,6 +57,7 @@ if (dashDuration > 0) {
 	// Y Collision
 	if place_meeting(x, y + yspd, oFloor){
 		jumpCount = 0;
+		hasDashed = false;
 		var _pixelCheck = _subPixel * sign(yspd);
 		while !place_meeting(x,y + _pixelCheck, oFloor){
 			y += _pixelCheck;
@@ -143,6 +145,8 @@ if (attacking) {
 if lives == 0 {
 	instance_destroy();
 }
-
+if(hasTopPiece && hasLeftPiece && hasRightPiece){
+	hasPieces = true;
+}
 
 
