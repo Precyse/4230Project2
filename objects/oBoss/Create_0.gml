@@ -1,6 +1,5 @@
 
 /// @description Insert description here
-
 //Firing bullet settings
 canFire1 = true;
 canFire2 = false;

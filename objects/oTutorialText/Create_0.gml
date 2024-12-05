@@ -4,3 +4,7 @@ hasJumped = false;
 hasRightClicked = false;
 hasLeftClicked = false;
 hasDashed = false;
+
+//Boss Tracking
+
+global.boss_defeated = false;

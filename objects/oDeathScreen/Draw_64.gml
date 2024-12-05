@@ -6,4 +6,4 @@ draw_set_color(c_black);
 //draw_set_valign(fa_middle);
 draw_set_font(fontNeon200);
 
-draw_text(75,100,"YOU DIED");
+draw_text(670,260,"YOU DIED");

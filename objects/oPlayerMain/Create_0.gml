@@ -15,3 +15,5 @@ sprite[4] = sPlayerLeft;
 sprite[5] = sPlayerDownLeft;
 sprite[6] = sPlayerDown;
 sprite[7] = sPlayerDownRight;
+
+
