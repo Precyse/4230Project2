@@ -119,21 +119,24 @@ if(mouse_check_button(mb_right) and canFire = true){
     }
 
 //Sprite Control
-if (attacking) {
+
+// fixed it, left mb check
+if (mouse_check_button(mb_left)) {
+    attacking = true;
     sprite_index = sPlayerAttack;
     image_speed = 1;
 
-// check if attacking anim finished
+    // check if attacking anim finished
     if (image_index >= image_number - 1) {
-        attacking = false;
-        image_index = 0;
+        image_index = 0; // frame reset to loop
     }
 } else {
     // not attacking
+    attacking = false;
     sprite_index = sPlayer;
 
     if (xspd != 0) {
-       // running sprite
+        // running sprite
         image_speed = 1; 
     } else {
         // freeze sprite if standing
