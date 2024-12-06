@@ -14,8 +14,8 @@
   "name":"oBoss",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Boss1",
+    "path":"folders/Objects/Boss1.yy",
   },
   "parentObjectId":null,
   "persistent":false,
