@@ -1,6 +1,7 @@
 
 /// @description Insert description here
 //Firing bullet settings
+global.boss_defeated = false;
 canFire1 = true;
 canFire2 = false;
 canFire3 = true
@@ -11,4 +12,4 @@ maxY = 100
 maxX = 1000
 
 //Boss settings
-hp = 10
+hp = 150

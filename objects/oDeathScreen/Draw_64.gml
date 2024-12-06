@@ -4,4 +4,4 @@ draw_set_color(c_black);
 
 draw_set_font(fontNeon200);
 
-draw_text(640,260,"YOU DIED");
+draw_text(70,100,"YOU DIED");

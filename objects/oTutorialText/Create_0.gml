@@ -8,3 +8,5 @@ hasDashed = false;
 //Boss Tracking
 
 global.boss_defeated = false;
+global.boss2_defeated = false;
+global.boss3_defeated = false;

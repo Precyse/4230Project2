@@ -18,4 +18,6 @@ move = 0;
 
 image_speed = 0.5;
 
+global.boss2_defeated = false;
+
 

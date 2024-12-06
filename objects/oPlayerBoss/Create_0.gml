@@ -52,6 +52,7 @@ onGround = true;
 	
 spread_count = 3; // Number of bullets in the spread
 spread_angle = 45; // Total angle of the spread
+hp = 120;
 lives = 3;
 dashDir = face;
 hasDashed = false;
