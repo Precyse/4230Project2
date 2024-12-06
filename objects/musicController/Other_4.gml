@@ -20,6 +20,10 @@ switch(room) {
 	audio_play_sound(StoryScreen_BGM, 1, true);
 	break;
 	
+	case rmMain:
+	audio_play_sound(sMainRoom, 1, true);
+	break;
+	
 	case rmTutorialLevel:
 	break;
 	
