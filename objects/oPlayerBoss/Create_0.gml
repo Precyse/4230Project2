@@ -60,5 +60,6 @@ hasDashed = false;
 hasTopPiece = false;
 hasRightPiece = false;
 hasLeftPiece = false;
+footstep_handle = noone;
 
 global.hasPieces = false;
