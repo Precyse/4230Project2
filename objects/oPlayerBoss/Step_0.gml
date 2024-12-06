@@ -77,51 +77,57 @@ else if (xprevious > x) {
 }
 	
 // Far Bullets (Main Fire)
-if(mouse_check_button(mb_left) and canFire = true){
-	attacking = true;
-	var farBullet = instance_create_layer(x+30, y+20,"Instances",oFarBullet);
-	if(facingRight){
-		farBullet.speed = 15;
-	}
-	if(facingLeft){
-		farBullet.speed = -15;
-	}
-	canFire = false;
-	alarm[0] = 20;
-	
+if (mouse_check_button(mb_left) and canFire == true) {
+    attacking = true;
+
+    // Adjust the bullet spawn position based on facing direction
+    var bullet_x_offset = facingRight ? 30 : -30; 
+    var farBullet = instance_create_layer(x + bullet_x_offset, y + 20, "Instances", oFarBullet);
+
+    // Set bullet speed based on facing direction
+    farBullet.speed = facingRight ? 15 : -15;
+
+    canFire = false;
+    alarm[0] = 20;
 }
-// Spead Bullet Pattern (Alt Fire)
-if(mouse_check_button(mb_right) and canFire = true){
-	attacking = true;
-	var closeBulletTop = instance_create_layer(x+30, y-5,"Bullets",oCloseBullet);
-	var closeBulletMiddle = instance_create_layer(x+30, y+20,"Bullets",oCloseBullet);
-	var closeBulletBottom = instance_create_layer(x+30, y+45,"Bullets",oCloseBullet);
-	if(facingRight){
-		closeBulletTop.speed = 15;
-		closeBulletTop.direction = 10;
-			
-		closeBulletMiddle.speed = 15;
-			
-		closeBulletBottom.speed = 15;
-		closeBulletBottom.direction = -10;
-		}
-		if(facingLeft){
-			closeBulletTop.speed = -15;
-			closeBulletTop.direction = 350;
-			
-			closeBulletMiddle.speed = -15;
-			
-			closeBulletBottom.speed = -15;
-			closeBulletBottom.direction = 370;
-		}
-		canFire = false;
-		alarm[0] = 20;
+
+// Spread Bullet Pattern (Alt Fire)
+if (mouse_check_button(mb_right) and canFire == true) {
+    attacking = true;
+
+    // Adjust the bullet spawn position based on facing direction
+    var bullet_x_offset = facingRight ? 30 : -30;
+
+    // Create bullets at specific offsets
+    var closeBulletTop = instance_create_layer(x + bullet_x_offset, y - 5, "Bullets", oCloseBullet);
+    var closeBulletMiddle = instance_create_layer(x + bullet_x_offset, y + 20, "Bullets", oCloseBullet);
+    var closeBulletBottom = instance_create_layer(x + bullet_x_offset, y + 45, "Bullets", oCloseBullet);
+
+    if (facingRight) {
+        closeBulletTop.speed = 15;
+        closeBulletTop.direction = 10;
+
+        closeBulletMiddle.speed = 15;
+
+        closeBulletBottom.speed = 15;
+        closeBulletBottom.direction = -10;
+    } else if (facingLeft) {
+        closeBulletTop.speed = -15;
+        closeBulletTop.direction = 350;
+
+        closeBulletMiddle.speed = -15;
+
+        closeBulletBottom.speed = -15;
+        closeBulletBottom.direction = 370;
     }
 
+    canFire = false;
+    alarm[0] = 20;
+}
 //Sprite Control
 
 // fixed it, left mb check
-if (mouse_check_button(mb_left)) {
+if (mouse_check_button(mb_left) or mouse_check_button(mb_right)) {
     attacking = true;
     sprite_index = sPlayerAttack;
     image_speed = 1;
@@ -147,9 +153,6 @@ if (mouse_check_button(mb_left)) {
 // Life Control
 if lives == 0 {
 	instance_destroy();
-}
-if(hasTopPiece && hasLeftPiece && hasRightPiece){
-	hasPieces = true;
 }
 
 

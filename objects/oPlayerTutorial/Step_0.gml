@@ -16,7 +16,7 @@ if (dashDuration == 0) { // Only apply normal movement when not dashing
 }
 
 // Dashing
-if (dashKey && dashDuration == 0) { // Start a new dash only if not already dashing
+if (dashKey && dashDuration == 0 && hasDashed = false) { // Start a new dash only if not already dashing
     hasDashed = true;
 	dashDuration = 10;
     dashDir = face; // Save the direction for the dash
@@ -56,8 +56,8 @@ if (dashDuration > 0) {
 	
 	// Y Collision
 	if place_meeting(x, y + yspd, oFloor){
-		hasDashed = false;
 		jumpCount = 0;
+		hasDashed = false;
 		var _pixelCheck = _subPixel * sign(yspd);
 		while !place_meeting(x,y + _pixelCheck, oFloor){
 			y += _pixelCheck;
@@ -77,63 +77,72 @@ else if (xprevious > x) {
 }
 	
 // Far Bullets (Main Fire)
-if(mouse_check_button(mb_left) and canFire = true){
-	attacking = true;
-	var farBullet = instance_create_layer(x+30, y+20,"Instances",oFarBullet);
-	if(facingRight){
-		farBullet.speed = 15;
-	}
-	if(facingLeft){
-		farBullet.speed = -15;
-	}
-	canFire = false;
-	alarm[0] = 20;
-	
+if (mouse_check_button(mb_left) and canFire == true) {
+    attacking = true;
+
+    // Adjust the bullet spawn position based on facing direction
+    var bullet_x_offset = facingRight ? 30 : -30; 
+    var farBullet = instance_create_layer(x + bullet_x_offset, y + 20, "Instances", oFarBullet);
+
+    // Set bullet speed based on facing direction
+    farBullet.speed = facingRight ? 15 : -15;
+
+    canFire = false;
+    alarm[0] = 20;
 }
-// Spead Bullet Pattern (Alt Fire)
-if(mouse_check_button(mb_right) and canFire = true){
-	attacking = true;
-	var closeBulletTop = instance_create_layer(x+30, y-5,"Bullets",oCloseBullet);
-	var closeBulletMiddle = instance_create_layer(x+30, y+20,"Bullets",oCloseBullet);
-	var closeBulletBottom = instance_create_layer(x+30, y+45,"Bullets",oCloseBullet);
-	if(facingRight){
-		closeBulletTop.speed = 15;
-		closeBulletTop.direction = 10;
-			
-		closeBulletMiddle.speed = 15;
-			
-		closeBulletBottom.speed = 15;
-		closeBulletBottom.direction = -10;
-		}
-		if(facingLeft){
-			closeBulletTop.speed = -15;
-			closeBulletTop.direction = 350;
-			
-			closeBulletMiddle.speed = -15;
-			
-			closeBulletBottom.speed = -15;
-			closeBulletBottom.direction = 370;
-		}
-		canFire = false;
-		alarm[0] = 20;
+
+// Spread Bullet Pattern (Alt Fire)
+if (mouse_check_button(mb_right) and canFire == true) {
+    attacking = true;
+
+    // Adjust the bullet spawn position based on facing direction
+    var bullet_x_offset = facingRight ? 30 : -30;
+
+    // Create bullets at specific offsets
+    var closeBulletTop = instance_create_layer(x + bullet_x_offset, y - 5, "Bullets", oCloseBullet);
+    var closeBulletMiddle = instance_create_layer(x + bullet_x_offset, y + 20, "Bullets", oCloseBullet);
+    var closeBulletBottom = instance_create_layer(x + bullet_x_offset, y + 45, "Bullets", oCloseBullet);
+
+    if (facingRight) {
+        closeBulletTop.speed = 15;
+        closeBulletTop.direction = 10;
+
+        closeBulletMiddle.speed = 15;
+
+        closeBulletBottom.speed = 15;
+        closeBulletBottom.direction = -10;
+    } else if (facingLeft) {
+        closeBulletTop.speed = -15;
+        closeBulletTop.direction = 350;
+
+        closeBulletMiddle.speed = -15;
+
+        closeBulletBottom.speed = -15;
+        closeBulletBottom.direction = 370;
     }
 
+    canFire = false;
+    alarm[0] = 20;
+}
 //Sprite Control
-if (attacking) {
+
+// fixed it, left mb check
+if (mouse_check_button(mb_left) or mouse_check_button(mb_right)) {
+    attacking = true;
     sprite_index = sPlayerAttack;
     image_speed = 1;
 
-// check if attacking anim finished
+    // check if attacking anim finished
     if (image_index >= image_number - 1) {
-        attacking = false;
-        image_index = 0;
+        image_index = 0; // frame reset to loop
     }
 } else {
     // not attacking
+    attacking = false;
     sprite_index = sPlayer;
 
     if (xspd != 0) {
-       // running sprite
+        // running sprite
         image_speed = 1; 
     } else {
         // freeze sprite if standing
@@ -145,6 +154,5 @@ if (attacking) {
 if lives == 0 {
 	instance_destroy();
 }
-
 
 

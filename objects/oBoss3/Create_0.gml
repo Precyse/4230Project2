@@ -5,6 +5,7 @@ secondPhase = false
 summonBat = true
 move = false
 global.location = 1
+global.boss3_defeated = false;
 alarm[1] = game_get_speed(gamespeed_fps) * 8
-hp = 50
+hp = 10
 randomize()

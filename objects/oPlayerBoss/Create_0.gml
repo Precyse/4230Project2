@@ -61,4 +61,4 @@ hasTopPiece = false;
 hasRightPiece = false;
 hasLeftPiece = false;
 
-hasPieces = false;
+global.hasPieces = false;

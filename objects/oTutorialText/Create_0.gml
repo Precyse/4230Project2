@@ -10,3 +10,9 @@ hasDashed = false;
 global.boss_defeated = false;
 global.boss2_defeated = false;
 global.boss3_defeated = false;
+
+global.hasTopPiece = false;
+global.hasLeftPiece = false;
+global.hasRightPiece = false;
+
+global.hasPieces = false;

@@ -12,4 +12,4 @@ maxY = 100
 maxX = 1000
 
 //Boss settings
-hp = 150
+hp = 15
