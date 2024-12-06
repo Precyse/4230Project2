@@ -88,6 +88,7 @@
     {"id":{"name":"rmStory","path":"rooms/rmStory/rmStory.yy",},},
     {"id":{"name":"rmTutorialLevel","path":"rooms/rmTutorialLevel/rmTutorialLevel.yy",},},
     {"id":{"name":"scBossControls","path":"scripts/scBossControls/scBossControls.yy",},},
+    {"id":{"name":"Boss_deathSound","path":"sounds/Boss_deathSound/Boss_deathSound.yy",},},
     {"id":{"name":"Boss1_BGM","path":"sounds/Boss1_BGM/Boss1_BGM.yy",},},
     {"id":{"name":"Boss2_BGM","path":"sounds/Boss2_BGM/Boss2_BGM.yy",},},
     {"id":{"name":"Boss3_BGM","path":"sounds/Boss3_BGM/Boss3_BGM.yy",},},
