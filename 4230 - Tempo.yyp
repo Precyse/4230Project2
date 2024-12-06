@@ -57,6 +57,7 @@
     {"id":{"name":"oBossTeleporter","path":"objects/oBossTeleporter/oBossTeleporter.yy",},},
     {"id":{"name":"oBossTeleporter2","path":"objects/oBossTeleporter2/oBossTeleporter2.yy",},},
     {"id":{"name":"oBossTeleporter3","path":"objects/oBossTeleporter3/oBossTeleporter3.yy",},},
+    {"id":{"name":"oCheatController","path":"objects/oCheatController/oCheatController.yy",},},
     {"id":{"name":"oCloseBullet","path":"objects/oCloseBullet/oCloseBullet.yy",},},
     {"id":{"name":"oContinue","path":"objects/oContinue/oContinue.yy",},},
     {"id":{"name":"oDeathScreen","path":"objects/oDeathScreen/oDeathScreen.yy",},},

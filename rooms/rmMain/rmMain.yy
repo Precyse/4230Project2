@@ -21,6 +21,7 @@
     {"name":"inst_B87F699","path":"rooms/rmMain/rmMain.yy",},
     {"name":"inst_148153F0","path":"rooms/rmMain/rmMain.yy",},
     {"name":"inst_445B83B2","path":"rooms/rmMain/rmMain.yy",},
+    {"name":"inst_4EB78295","path":"rooms/rmMain/rmMain.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -37,6 +38,7 @@
         {"$GMRInstance":"v1","%Name":"inst_5DFDD73E","colour":16777215,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5DFDD73E","objectId":{"name":"oFloor","path":"objects/oFloor/oFloor.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-1.7839961,"scaleX":0.2,"scaleY":0.1,"x":393.0,"y":220.0,},
         {"$GMRInstance":"v1","%Name":"inst_E263926","colour":16777215,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_E263926","objectId":{"name":"oFloor","path":"objects/oFloor/oFloor.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.2,"scaleY":0.1,"x":392.0,"y":178.0,},
         {"$GMRInstance":"v1","%Name":"inst_445B83B2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_445B83B2","objectId":{"name":"musicController","path":"objects/musicController/musicController.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":32.0,},
+        {"$GMRInstance":"v1","%Name":"inst_4EB78295","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4EB78295","objectId":{"name":"oCheatController","path":"objects/oCheatController/oCheatController.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":32.0,},
       ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Tiles_2","depth":100,"effectEnabled":true,"effectType":"none","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Tiles_2","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":23,"SerialiseWidth":40,"TileCompressedData":[
           2,-2147483648,220,-4,-2147483648,10,12,13,14,15,16,17,-2147483648,-2147483648,90,90,-5,-2147483648,5,

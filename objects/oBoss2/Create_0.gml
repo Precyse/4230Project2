@@ -13,7 +13,7 @@ spikeTimer = room_speed * 1; // Interval for shooting spikes
 alarm[0] = spikeTimer; // Set the initial alarm
 spikeSpeed = 5; // Speed of the spikes
 
-hp = 10;
+hp = 100;
 move = 0;
 
 image_speed = 0.5;
