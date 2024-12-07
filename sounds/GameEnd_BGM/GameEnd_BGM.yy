@@ -18,8 +18,8 @@
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
-  "sampleRate":44100,
+  "sampleRate":48000,
   "soundFile":"GameEnd_BGM.wav",
   "type":0,
-  "volume":0.5,
+  "volume":0.11,
 }

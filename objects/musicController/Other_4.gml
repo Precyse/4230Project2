@@ -29,6 +29,11 @@ switch(room) {
 	break;
 	
 	case rmTutorialLevel:
+	audio_play_sound(sMainRoom, 1, true);
+	break;
+	
+	case rmStartScreen:
+	audio_play_sound(StoryScreen_BGM, 1, true);
 	break;
 	
 	default:

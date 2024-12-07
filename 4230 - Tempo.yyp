@@ -164,11 +164,11 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rmBoss","path":"rooms/rmBoss/rmBoss.yy",},},
     {"roomId":{"name":"rmStartScreen","path":"rooms/rmStartScreen/rmStartScreen.yy",},},
     {"roomId":{"name":"rmStory","path":"rooms/rmStory/rmStory.yy",},},
     {"roomId":{"name":"rmTutorialLevel","path":"rooms/rmTutorialLevel/rmTutorialLevel.yy",},},
     {"roomId":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
+    {"roomId":{"name":"rmBoss","path":"rooms/rmBoss/rmBoss.yy",},},
     {"roomId":{"name":"rmBoss2","path":"rooms/rmBoss2/rmBoss2.yy",},},
     {"roomId":{"name":"rmBoss3","path":"rooms/rmBoss3/rmBoss3.yy",},},
     {"roomId":{"name":"rmGameEnd","path":"rooms/rmGameEnd/rmGameEnd.yy",},},
