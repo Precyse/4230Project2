@@ -7,7 +7,7 @@ if global.dmgCheat {
 	oBoss.hp -= 50
 }
 else{
-	oBoss.hp -= 1.5
+	oBoss.hp -= 2
 }
 
 if oBoss.hp <= 0 instance_destroy(oBoss)

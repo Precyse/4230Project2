@@ -12,7 +12,6 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oLeftMusicDisk","path":"objects/oLeftMusicDisk/oLeftMusicDisk.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oRightMusicDisk","path":"objects/oRightMusicDisk/oRightMusicDisk.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oTopMusicDisk","path":"objects/oTopMusicDisk/oTopMusicDisk.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oBoss2","path":"objects/oBoss2/oBoss2.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oBoss3","path":"objects/oBoss3/oBoss3.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
