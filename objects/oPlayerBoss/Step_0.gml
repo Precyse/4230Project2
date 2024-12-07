@@ -48,7 +48,7 @@ if (dashDuration > 0) {
 		jumpKeyBufferTimer = 0;
 		
 		jumpCount++;
-		
+		audio_play_sound(Jump, 1, false);
 		yspd = jspd;
 		
 	}

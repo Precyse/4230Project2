@@ -7,4 +7,5 @@ event_inherited();
 initial = x
 //Max amount the bullet will travel
 maxX = 1000
+audio_play_sound(Boss1Fire, 1, false);
 

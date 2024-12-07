@@ -12,6 +12,7 @@ if speed > 0 and x < initial {
 
 //If bullet reached the left point, move right
 if x <= (initial - maxX) {
+	image_xscale = -image_xscale
 	speed = 5
 }
 

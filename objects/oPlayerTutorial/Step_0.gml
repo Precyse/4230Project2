@@ -48,7 +48,7 @@ if (dashDuration > 0) {
 		jumpKeyBufferTimer = 0;
 		
 		jumpCount++;
-		
+		audio_play_sound(Hit, 1, false);
 		yspd = jspd;
 		
 	}
@@ -78,6 +78,8 @@ else if (xprevious > x) {
 	
 // Far Bullets (Main Fire)
 if (mouse_check_button(mb_left) and canFire == true) {
+	audio_sound_pitch(tempo_farShot, random_range(0.9, 1.1));
+	audio_play_sound(tempo_farShot, 1, false);
     attacking = true;
 
     // Adjust the bullet spawn position based on facing direction
@@ -94,6 +96,8 @@ if (mouse_check_button(mb_left) and canFire == true) {
 // Spread Bullet Pattern (Alt Fire)
 if (mouse_check_button(mb_right) and canFire == true) {
     attacking = true;
+	audio_sound_pitch(Tempo_closeShot, random_range(0.9, 1.1));
+	audio_play_sound(Tempo_closeShot, 1, false);
 
     // Adjust the bullet spawn position based on facing direction
     var bullet_x_offset = facingRight ? 30 : -30;
@@ -155,4 +159,16 @@ if lives == 0 {
 	instance_destroy();
 }
 
+var is_moving = (xspd != 0);
+
+if (is_moving && !audio_is_playing(footstep_handle)) {
+    footstep_handle = audio_play_sound(Tempo_footStep, 1, true);
+    audio_sound_pitch(footstep_handle, random_range(0.9, 1.1));
+}
+
+// if player is not moving, stop it
+if (!is_moving && audio_is_playing(footstep_handle)) {
+    audio_stop_sound(footstep_handle);
+    footstep_handle = noone;
+}
 

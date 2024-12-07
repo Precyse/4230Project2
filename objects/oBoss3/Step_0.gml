@@ -27,7 +27,7 @@ if canFire and move = false{
 	var fireTiming = random_range(1.5,1.9)
 	alarm[0] = game_get_speed(gamespeed_fps) * fireTiming
 }
-if hp < 50 {
+if hp <= 50 {
 	secondPhase = true
 }
 

@@ -19,6 +19,7 @@ if canFire1 {
 		bullet.speed = -5
 		bullet.vspeed = 0
 	}
+	audio_play_sound(Boss1Fire, 1, false);
 	canFire1 = false;
 	var bulletTiming = irandom_range(1,2)
 	alarm[0] = game_get_speed(gamespeed_fps) * bulletTiming

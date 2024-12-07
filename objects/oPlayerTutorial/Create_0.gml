@@ -56,7 +56,7 @@ hp = 120;
 lives = 3;
 dashDir = face;
 hasDashed = false;
-
+footstep_handle = noone;
 hasTopPiece = false;
 hasRightPiece = false;
 hasLeftPiece = false;

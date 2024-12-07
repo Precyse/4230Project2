@@ -8,3 +8,4 @@ initial = y
 //Max amount bullet is allowed to move vertically from initial y
 maxY = 200
 
+

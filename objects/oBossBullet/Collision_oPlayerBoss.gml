@@ -9,6 +9,7 @@ if(global.boss_defeated != true){
 		oPlayerBoss.yspd = 0
 	}
 	lives -= 1
+	audio_play_sound(Hit, 1, false);
 	if lives <= 0 instance_destroy(oPlayerBoss)
 	instance_destroy(self);
 }
