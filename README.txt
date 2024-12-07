@@ -1,3 +1,5 @@
+Team Members: Ahmad Mason, Bejaming Nightingale, Nandana Pillai, Santiago Primera Escobedo
+
 The controls for the game are as follow:
 
 Cheat codes:
