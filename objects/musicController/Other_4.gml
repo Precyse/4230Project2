@@ -24,6 +24,10 @@ switch(room) {
 	audio_play_sound(sMainRoom, 1, true);
 	break;
 	
+	case rmGameEnd:
+	audio_play_sound(GameEnd_BGM, 1, true);
+	break;
+	
 	case rmTutorialLevel:
 	break;
 	
